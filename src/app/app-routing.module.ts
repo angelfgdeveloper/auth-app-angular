@@ -21,7 +21,9 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, {
+    useHash: false // true concatena # en url el localhost:4000/#/dashboard
+  })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
